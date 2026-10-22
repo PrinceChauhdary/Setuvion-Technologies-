@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8fc">
+  <meta name="description" content="Setuvion Technologies is an early-stage product company focused on automotive engineering software. Explore AutoVerify Studio, a local-first developer preview.">
+  <title>Setuvion Technologies | Automotive Engineering Software</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-rule"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Setuvion Technologies home">
+      <img src="assets/setuvion-technologies-logo.png" alt="Setuvion Technologies">
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="#product">Products</a>
+      <a href="#approach">Engineering approach</a>
+      <a href="#technology">Technology</a>
+      <a href="#portfolio">Focus areas</a>
+      <a href="#security">Security &amp; privacy</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#about">Company</a>
+      <a class="nav-cta" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-mark"></span> ENGINEERING SOFTWARE · AUTOMOTIVE FIRST</div>
+        <h1>Clarity for the <span>software-defined vehicle.</span></h1>
+        <p class="hero-lede">Setuvion Technologies is building practical engineering products. We’re starting with automotive software validation and AutoVerify Studio, a local-first desktop developer preview.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#product">Explore our first product <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="#approach">Our engineering approach <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="preview-note"><span class="status-dot"></span><span><strong>Developer preview in progress</strong><br>Built for local, controlled engineering workflows.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustrative automotive engineering imagery">
+        <figure class="hero-photo-frame"><img src="assets/automotive-engineering-triptych.webp" alt="Illustrative triptych showing an unbranded electric vehicle in a test workshop, an engineer inspecting a vehicle, and automotive electronics"><span class="photo-wash"></span><figcaption>ILLUSTRATIVE IMAGERY · NOT SETUVION FACILITY OR HARDWARE</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="principles-strip" aria-label="Product principles">
+      <div><span class="principle-icon">01</span><span>Local by default</span></div>
+      <div><span class="principle-icon">02</span><span>Evidence you can inspect</span></div>
+      <div><span class="principle-icon">03</span><span>Built around real workflows</span></div>
+      <div><span class="principle-icon">04</span><span>Capabilities stated plainly</span></div>
+    </section>
+
+    <section id="approach" class="section section-wrap approach-section">
+      <div class="section-heading">
+        <div><div class="eyebrow">THE ENGINEERING CHALLENGE</div><h2>Automotive software needs <span>repeatable evidence.</span></h2></div>
+        <p>Vehicle systems connect properties, services, signals, and hardware. When an issue appears, engineers need a clear way to inspect what the system exposed and preserve what they observed.</p>
+      </div>
+      <div class="approach-grid">
+        <article class="approach-card"><div class="card-index">01 / INSPECT</div><div class="line-icon"><svg viewBox="0 0 32 32"><circle cx="13" cy="13" r="7"/><path d="m18 18 8 8M10 13h6m-3-3v6"/></svg></div><h3>See the system clearly</h3><p>Browse vehicle property metadata and on-demand values with the source and access mode visible.</p><span class="card-tag">PROPERTY EXPLORATION</span></article>
+        <article class="approach-card"><div class="card-index">02 / REPEAT</div><div class="line-icon"><svg viewBox="0 0 32 32"><path d="M25 12a10 10 0 0 0-17-3L5 12m0-6v6h6M7 20a10 10 0 0 0 17 3l3-3m0 6v-6h-6"/></svg></div><h3>Run checks consistently</h3><p>Keep suites and results together so the same checks can be run again and reviewed later.</p><span class="card-tag">REPEATABLE WORKFLOWS</span></article>
+        <article class="approach-card"><div class="card-index">03 / EXPLAIN</div><div class="line-icon"><svg viewBox="0 0 32 32"><path d="M8 4h11l6 6v18H8zM19 4v7h6M12 17h9m-9 5h9"/></svg></div><h3>Share useful evidence</h3><p>Capture run metadata, outcomes, and source details in reports that are easy to discuss with a team.</p><span class="card-tag">LOCAL REPORTING</span></article>
+      </div>
+    </section>
+
+    <section id="technology" class="technology-section" aria-labelledby="technology-title">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <div><div class="eyebrow">THE CONNECTED VEHICLE LANDSCAPE</div><h2 id="technology-title">Different platforms. <span>One complex vehicle.</span></h2></div>
+          <p>Software-defined vehicles bring together cockpit software, embedded controllers, networks, and connected services. These technologies have different roles; this overview is context, not a claim that Setuvion implements every layer.</p>
+        </div>
+        <div class="architecture-map" aria-label="Illustrative automotive software architecture overview">
+          <div class="architecture-caption"><span>ILLUSTRATIVE SYSTEM VIEW</span><span>CONCEPTUAL · NOT A PRODUCT TOPOLOGY</span></div>
+          <div class="architecture-top"><span class="arch-symbol">01</span><div><strong>Vehicle functions and user experiences</strong><small>Cockpit · driver information · body · powertrain · safety-related functions</small></div><span class="arch-chip">APPLICATIONS</span></div>
+          <div class="architecture-branches" aria-hidden="true"><i></i><i></i></div>
+          <div class="architecture-platforms">
+            <article class="architecture-platform aaos-platform">
+              <div class="arch-platform-head"><span class="arch-symbol">02A</span><span class="arch-chip current-chip">CURRENT ENGINEERING FOCUS</span></div>
+              <h3>Android Automotive OS</h3>
+              <p>An Android-based vehicle infotainment platform. Android Auto is a different product and integration model.</p>
+              <div class="arch-flow"><span>Vehicle apps</span><b>→</b><span>Car APIs</span><b>→</b><span>CarService</span><b>→</b><span>VHAL</span></div>
+              <small class="arch-foot">AutoVerify preview: selected Android discovery and read-only property workflows, depending on the target and adapter.</small>
+              <a href="https://source.android.com/docs/automotive/vhal" target="_blank" rel="noopener noreferrer">Android VHAL documentation ↗</a>
+            </article>
+            <article class="architecture-platform autosar-platform">
+              <div class="arch-platform-head"><span class="arch-symbol">02B</span><span class="arch-chip context-chip">ECOSYSTEM CONTEXT</span></div>
+              <h3>AUTOSAR platforms</h3>
+              <p>AUTOSAR defines platform standards used in automotive software architectures; the choice depends on ECU role and system constraints.</p>
+              <div class="autosar-pair"><div><strong>Classic</strong><span>Microcontroller-based ECUs, with a layered software architecture.</span></div><div><strong>Adaptive</strong><span>High-performance ECUs and applications with dynamic needs.</span></div></div>
+              <small class="arch-foot">AutoVerify does not currently claim AUTOSAR execution, ARXML validation, or conformance testing.</small>
+              <a href="https://www.autosar.org/standards" target="_blank" rel="noopener noreferrer">AUTOSAR platform overview ↗</a>
+            </article>
+          </div>
+          <div class="architecture-shared"><span class="arch-symbol">03</span><div><strong>Compute, networks, and signal models</strong><small>ECUs and controllers · CAN / CAN FD · automotive Ethernet · signals and service interfaces</small></div><span class="arch-chip">SHARED FOUNDATIONS</span></div>
+          <div class="architecture-bottom"><div class="arch-bottom-mark" aria-hidden="true">AV</div><div><span class="arch-kicker">VALIDATION TOOLING · LIMITED PREVIEW SCOPE</span><strong>AutoVerify Studio</strong><small>Local simulation, selected property inspection, supported CAN/DBC workflows, and local run evidence. Adapter capabilities vary by source.</small></div><span class="preview-pill"><i></i> IN DEVELOPMENT</span></div>
+        </div>
+        <div class="technology-notes">
+          <article><span class="technology-index">01 / SDV</span><h3>Software-defined vehicle</h3><p>SDV is a broad industry direction: more vehicle behavior is shaped by software, with system architecture, update strategy, interfaces, and validation all mattering together. It is not a single platform or standard.</p></article>
+          <article><span class="technology-index">02 / CONNECTED SYSTEMS</span><h3>Automotive meets IoT</h3><p>Connected products share engineering concerns such as device identity, telemetry, connectivity, lifecycle, and security. Setuvion’s IoT ideas remain future exploration; no IoT product is available today.</p></article>
+          <article><span class="technology-index">03 / SIGNAL MODELS</span><h3>Common language for data</h3><p>Signal descriptions help teams interpret vehicle data consistently across tools. COVESA’s Vehicle Signal Specification is one open signal-modeling effort; it is not an AutoVerify integration claim.</p><a href="https://covesa.global/project/vehicle-signal-specification/" target="_blank" rel="noopener noreferrer">COVESA VSS overview ↗</a></article>
+        </div>
+        <p class="technology-disclaimer">Scope note: AutoVerify Studio is an early developer preview. The diagram is educational and does not imply OEM approval, AUTOSAR compliance, full-vehicle coverage, or verified behavior on a particular target.</p>
+      </div>
+    </section>
+
+    <section id="product" class="product-section">
+      <div class="section-wrap product-layout">
+        <div class="product-copy">
+          <div class="eyebrow eyebrow-light">FIRST PRODUCT · DEVELOPER PREVIEW</div>
+          <img class="product-logo" src="assets/autoverify-studio-logo.png" alt="AutoVerify Studio">
+          <h2>One desktop workspace for automotive software checks.</h2>
+          <p>AutoVerify Studio brings property inspection, synthetic signal workflows, test execution, and local reports into a Qt desktop prototype.</p>
+          <ul class="product-checks">
+            <li><span>✓</span> Android device discovery and read-only property diagnostics</li>
+            <li><span>✓</span> Local simulation, scenario playback, and deterministic test runs</li>
+            <li><span>✓</span> DBC and log exploration with receive-only SocketCAN capture</li>
+            <li><span>✓</span> Local CSV and HTML reports for test runs</li>
+          </ul>
+          <div class="product-footnote">Prototype status varies by adapter and target. Direct HIDL requires a compatible service and helper on the device. SocketCAN requires an already configured interface.</div>
+        </div>
+        <div class="product-demo">
+          <div class="demo-window-bar"><div class="window-dots"><i></i><i></i><i></i></div><span>AUTOVERIFY STUDIO <b>/</b> PROPERTY EXPLORER</span><span class="demo-label">ILLUSTRATIVE</span></div>
+          <div class="demo-shell">
+            <aside class="demo-sidebar"><div class="demo-logo-mark">A<span>V</span></div><div class="demo-nav selected"><i>▦</i> Properties</div><div class="demo-nav"><i>⌁</i> CAN / DBC</div><div class="demo-nav"><i>◴</i> Test runs</div><div class="demo-nav"><i>▤</i> Reports</div><div class="demo-side-bottom">LOCAL WORKSPACE</div></aside>
+            <div class="demo-content">
+              <div class="demo-top"><div><span class="demo-kicker">DEVICE INSPECTION · EXAMPLE</span><h3>Property Explorer</h3></div><span class="connection sample-connection"><i></i> SAMPLE SOURCE</span></div>
+              <div class="demo-tabs" role="tablist" aria-label="Illustrative product preview">
+                <button class="demo-tab active" type="button" role="tab" aria-selected="true" data-view="properties">Properties</button>
+                <button class="demo-tab" type="button" role="tab" aria-selected="false" data-view="baseline">Baseline diff</button>
+                <button class="demo-tab" type="button" role="tab" aria-selected="false" data-view="results">Test evidence</button>
+              </div>
+              <div class="demo-view active" data-panel="properties">
+                <div class="demo-summary"><div><span>PROPERTY CONFIGS</span><strong>303</strong></div><div><span>READ ACCESS</span><strong>Available</strong></div><div><span>DATA SOURCE</span><strong>Direct HIDL</strong></div></div>
+                <div class="property-table"><div class="table-head"><span>PROPERTY</span><span>TYPE</span><span>ACCESS</span><span>VALUE / QUALITY</span></div><div class="table-row"><span>Vehicle speed</span><span>FLOAT</span><span class="read">READ</span><span>36.0 km/h · AVAILABLE</span></div><div class="table-row"><span>Gear selection</span><span>INT32</span><span class="read">READ</span><span>Drive · AVAILABLE</span></div><div class="table-row"><span>Door state</span><span>INT32</span><span class="read">READ</span><span>Not sampled</span></div><div class="table-row"><span>Ignition state</span><span>INT32</span><span class="read">READ</span><span>Not sampled</span></div></div>
+                <div class="demo-source-note"><span class="small-dot"></span> Example values are illustrative; live availability depends on the connected target.</div>
+              </div>
+              <div class="demo-view" data-panel="baseline">
+                <div class="diff-banner"><span class="diff-check">↻</span><div><strong>Configuration comparison</strong><small>Compare local captures for the selected device</small></div></div>
+                <div class="diff-stats"><div><strong>303</strong><span>UNCHANGED</span></div><div><strong>2</strong><span>CHANGED</span></div><div><strong>1</strong><span>ADDED</span></div></div>
+                <div class="diff-row"><span class="diff-state changed">CHANGED</span><b>0x11600207</b><span>Sample rate · example</span></div><div class="diff-row"><span class="diff-state added">ADDED</span><b>0x11400E11</b><span>Property config · example</span></div>
+                <div class="demo-source-note">Illustrative comparison. Actual results come from the loaded device configurations.</div>
+              </div>
+              <div class="demo-view" data-panel="results">
+                <div class="results-heading"><div><span>LOCAL RUN</span><strong>Property smoke suite</strong></div><span class="run-state">COMPLETED</span></div>
+                <div class="result-row"><span class="result-icon pass">✓</span><span>Configuration list available</span><b>PASS</b></div><div class="result-row"><span class="result-icon pass">✓</span><span>Read-only access reported</span><b>PASS</b></div><div class="result-row"><span class="result-icon skip">–</span><span>Hardware subscription</span><b>NOT INCLUDED</b></div>
+                <div class="report-strip"><span>Source recorded · Local report</span><span>CSV&nbsp; ↗</span></div>
+              </div>
+              <div class="demo-bottom"><span>OFFLINE-CAPABLE WORKSPACE</span><span>NO CLOUD UPLOAD BY DEFAULT</span></div>
+            </div>
+          </div>
+          <div class="demo-disclaimer">Illustrative interface with sample data. Product capabilities depend on the selected source and connected device.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="download-section section-wrap" aria-labelledby="download-title">
+      <div class="download-card">
+        <div class="download-brand"><img src="assets/autoverify-studio-logo.png" alt="AutoVerify Studio"><span class="download-platform">LINUX DESKTOP · DEVELOPER PREVIEW</span></div>
+        <div class="download-copy"><div class="eyebrow">GET THE PREVIEW</div><h2 id="download-title">AutoVerify Studio download</h2><p>The app is still in development. A distributable Ubuntu package, release notes, and software distribution terms are not ready yet.</p><div class="download-actions"><button class="button download-disabled" type="button" disabled>Download not available yet <span aria-hidden="true">↗</span></button><a class="text-link" href="#contact">Ask about the preview <span aria-hidden="true">→</span></a></div><small>No installer or binary is included on this site.</small></div>
+        <div class="download-status"><span class="status-ring">···</span><span>PACKAGE<br>PREPARATION</span></div>
+      </div>
+    </section>
+
+    <section id="workflow" class="section section-wrap workflow-section">
+      <div class="section-heading">
+        <div><div class="eyebrow">A PRACTICAL WORKFLOW</div><h2>From connection to <span>clearer evidence.</span></h2></div>
+        <p>Start with a data source you control, inspect what it exposes, and preserve enough context to make the result useful.</p>
+      </div>
+      <div class="workflow-track">
+        <article><div class="workflow-number">01</div><div class="workflow-connector"></div><h3>Choose a source</h3><p>Use local simulation or connect an authorized Android target through its available adapter.</p></article>
+        <article><div class="workflow-number">02</div><div class="workflow-connector"></div><h3>Inspect and run</h3><p>Explore property metadata, review CAN/DBC data, or execute supported local checks.</p></article>
+        <article><div class="workflow-number">03</div><div class="workflow-connector"></div><h3>Review the evidence</h3><p>Keep run outcomes and source details together in locally generated reports.</p></article>
+      </div>
+      <div class="privacy-callout"><div class="privacy-icon">⌂</div><div><strong>Designed for controlled engineering data</strong><p>AutoVerify Studio works locally. The prototype does not upload customer logs or test results to a cloud service by default.</p></div><span class="privacy-tag">LOCAL-FIRST</span></div>
+    </section>
+
+    <section id="roadmap" class="roadmap-section">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <div><div class="eyebrow eyebrow-light">BUILDING IN STAGES</div><h2>Focused progress. <span>Honest scope.</span></h2></div>
+          <p>Setuvion is early. The roadmap follows engineering needs and customer discovery; planned work is not a promise of delivery.</p>
+        </div>
+        <div class="roadmap-grid">
+          <article class="roadmap-card now"><div class="roadmap-status"><i></i> IN DEVELOPMENT</div><div class="roadmap-id">PHASE 01</div><h3>AutoVerify Studio</h3><p>Property diagnostics, local simulation, test workflows, CAN/DBC exploration, and local reports.</p><span class="roadmap-line"></span><small>Developer preview · capabilities vary by source</small></article>
+          <article class="roadmap-card"><div class="roadmap-status planned"><i></i> EXPLORING</div><div class="roadmap-id">PHASE 02</div><h3>Team validation workflows</h3><p>Learn from engineering teams and improve repeatability, comparison, and review of results.</p><span class="roadmap-line"></span><small>Under discovery · scope not fixed</small></article>
+          <article class="roadmap-card"><div class="roadmap-status planned"><i></i> FUTURE</div><div class="roadmap-id">PHASE 03</div><h3>Automotive and IoT products</h3><p>Explore focused products for connected devices and broader mobility engineering as customer needs become clear.</p><span class="roadmap-line"></span><small>Future direction · no IoT product available today</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section section-wrap portfolio-section" aria-labelledby="portfolio-title">
+      <div class="section-heading">
+        <div><div class="eyebrow">PRODUCT COMPANY · LONG-TERM DIRECTION</div><h2 id="portfolio-title">One focused start. <span>More useful products over time.</span></h2></div>
+        <p>Setuvion’s goal is to build a portfolio of engineering software products. We’re starting with an automotive validation problem and will explore adjacent needs before defining future products.</p>
+      </div>
+      <div class="portfolio-grid">
+        <article class="portfolio-card portfolio-current"><div class="portfolio-top"><span class="portfolio-number">01</span><span class="portfolio-state active-state"><i></i> CURRENT FOCUS</span></div><div class="portfolio-illustration automotive-art" aria-hidden="true"><svg viewBox="0 0 96 64"><path d="M9 43h8l7-17c2-5 6-8 12-9l19-4c6-1 11 1 15 5l10 10 9 2c4 1 6 4 7 8l1 5H9z"/><circle cx="29" cy="45" r="8"/><circle cx="73" cy="45" r="8"/><path d="m27 24 8-1 3-7m8-2-2 10h21l-8-8c-2-2-5-3-8-2"/></svg></div><h3>Automotive engineering</h3><p>AutoVerify Studio is the first product: a desktop workspace for vehicle property inspection, supported test workflows, and local evidence.</p><span class="portfolio-foot">IN DEVELOPMENT · DEVELOPER PREVIEW</span></article>
+        <article class="portfolio-card"><div class="portfolio-top"><span class="portfolio-number">02</span><span class="portfolio-state future-state">FUTURE EXPLORATION</span></div><div class="portfolio-illustration iot-art" aria-hidden="true"><svg viewBox="0 0 96 64"><rect x="34" y="18" width="28" height="30" rx="5"/><path d="M42 27h12m-12 7h12m-9 7h6M28 24a25 25 0 0 0 0 18m40-18a25 25 0 0 1 0 18M21 17a34 34 0 0 0 0 32m54-32a34 34 0 0 1 0 32"/><circle cx="48" cy="12" r="2"/></svg></div><h3>Connected devices and IoT</h3><p>Future discovery may include tools for inspecting, testing, and understanding connected products beyond vehicles.</p><span class="portfolio-foot">IDEA STAGE · NO PRODUCT ANNOUNCED</span></article>
+        <article class="portfolio-card"><div class="portfolio-top"><span class="portfolio-number">03</span><span class="portfolio-state future-state">PLANNED DIRECTION</span></div><div class="portfolio-illustration platform-art" aria-hidden="true"><svg viewBox="0 0 96 64"><rect x="18" y="15" width="26" height="20" rx="3"/><rect x="52" y="15" width="26" height="20" rx="3"/><rect x="35" y="41" width="26" height="12" rx="3"/><path d="M31 35v6h17m17-6v6H48m0-6v6"/></svg></div><h3>Modular product platform</h3><p>Over time, independent engineering products may share compatible foundations such as local data handling, adapters, and reporting.</p><span class="portfolio-foot">LONG-TERM VISION · NOT A CURRENT FEATURE</span></article>
+      </div>
+      <figure class="mobility-visual">
+        <img src="assets/two-wheeler-engineering.webp" alt="Illustrative electric motorcycle in an engineering workshop, with vehicle schematics and electronics nearby">
+        <figcaption><span class="mobility-kicker">FUTURE MOBILITY · EXPLORATION</span><strong>Two-wheeler engineering may be part of the journey.</strong><span>Illustrative scene only. Setuvion has no two-wheeler product or test facility available today.</span></figcaption>
+      </figure>
+      <p class="portfolio-disclaimer">AutoVerify Studio is the only product currently under active development. IoT, two-wheeler, and platform concepts are future directions, not announced releases.</p>
+    </section>
+
+    <section id="about" class="section section-wrap about-section">
+      <div class="about-mark"><img src="assets/setuvion-technologies-logo.png" alt="Setuvion Technologies"></div>
+      <div class="about-copy"><div class="eyebrow">ABOUT SETUVION</div><h2>A product company, <span>automotive first.</span></h2><p>Setuvion Technologies is an early-stage product-focused software venture. We’re starting in automotive engineering with AutoVerify Studio, and may explore IoT and other connected-product engineering tools in the future.</p><p class="provisional-note"><span>!</span> Setuvion Technologies and AutoVerify Studio are working names. Company, trademark, and domain availability have not yet been legally confirmed.</p></div>
+    </section>
+
+    <section id="security" class="security-section" aria-labelledby="security-title">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <div><div class="eyebrow">SECURITY &amp; PRIVACY</div><h2 id="security-title">Keep engineering data <span>in your control.</span></h2></div>
+          <p>AutoVerify Studio is designed around local workflows. The website also limits what it collects and how inquiries are handled.</p>
+        </div>
+        <div class="security-grid">
+          <article class="security-card"><span class="security-index">01 · DESKTOP PREVIEW</span><h3>Local-first by design</h3><p>The current desktop prototype runs locally and does not require a cloud service. Suites, run history, and reports are stored on the workstation.</p><span class="security-status">PRODUCT DESIGN</span></article>
+          <article class="security-card"><span class="security-index">02 · WEBSITE</span><h3>Minimal collection</h3><p>The site uses no analytics or tracking cookies. The contact form collects only the details needed to reply and stores submissions on its configured server volume.</p><span class="security-status">NO TRACKING</span></article>
+          <article class="security-card"><span class="security-index">03 · CONTACT FORM</span><h3>Abuse controls in place</h3><p>Submissions are validated, limited in size and frequency, checked against the page origin, and saved with restricted file permissions.</p><span class="security-status">SERVER CONTROLS</span></article>
+        </div>
+        <p class="security-limit">These are current preview safeguards, not a certification or independent security assessment. A public deployment must use HTTPS and protect access to its inquiry-storage volume.</p>
+      </div>
+    </section>
+
+    <section class="faq-section section section-wrap" aria-labelledby="faq-title">
+      <div class="section-heading">
+        <div><div class="eyebrow">COMMON QUESTIONS</div><h2 id="faq-title">A few things to <span>know before you start.</span></h2></div>
+        <p>Clear answers about preview access, data handling, and target support.</p>
+      </div>
+      <div class="faq-list">
+        <details><summary>Does AutoVerify Studio upload test data?</summary><p>The current preview is designed for local use and does not upload customer logs or test results to a cloud service by default.</p></details>
+        <details><summary>Will it work with every Android automotive target?</summary><p>No. Available properties and hardware features depend on the services and permissions exposed by each target. Simulator output is generated data and does not prove physical vehicle behavior.</p></details>
+        <details><summary>Can I download the application now?</summary><p>A distributable package and release terms are not ready yet. Use the contact form to ask about the developer preview.</p></details>
+        <details><summary>What happens to a contact-form inquiry?</summary><p>The inquiry is stored on the website’s configured server volume so the Setuvion team can respond. Do not include credentials, customer logs, or confidential vehicle data.</p></details>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="section-wrap contact-layout">
+        <div><div class="eyebrow eyebrow-light">LET'S TALK ENGINEERING</div><h2>Have a connected-product workflow worth improving?</h2><p>We’re interested in how automotive and connected-device teams inspect, test, and validate software. AutoVerify Studio is our current automotive focus; IoT remains a future exploration.</p></div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-row"><label>Your name<input name="name" autocomplete="name" maxlength="100" required></label><label>Work email<input name="email" type="email" autocomplete="email" maxlength="254" required></label></div>
+          <label>Company <span class="optional">(optional)</span><input name="company" autocomplete="organization" maxlength="120"></label>
+          <label>What automotive or connected-device workflow are you exploring?<textarea name="message" rows="3" maxlength="2000" required></textarea></label>
+          <div class="honeypot" aria-hidden="true"><label>Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+          <label class="consent-row"><input name="consent" type="checkbox" required><span>I agree that Setuvion may store this inquiry on its website server so the team can follow up. Do not include confidential vehicle data, logs, or credentials.</span></label>
+          <div class="form-submit-row"><button class="button button-primary" id="submit-inquiry" type="submit">Send inquiry <span aria-hidden="true">↗</span></button><p id="form-status" aria-live="polite">The form sends your message to this website’s backend. No third-party email service is used.</p></div>
+        </form>
+      </div>
+      <div class="contact-grid" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main"><a class="footer-brand" href="#top"><img src="assets/setuvion-technologies-logo.png" alt="Setuvion Technologies"></a><p>Automotive software engineering tools<br><span>Building AutoVerify Studio</span></p><a class="back-top" href="#top">BACK TO TOP ↑</a></div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Setuvion Technologies · Working name</span><span>Developer preview · No OEM certification claimed</span><a href="#legal">Legal &amp; privacy</a></div>
+    <div id="legal" class="legal-note">This is a product preview site. Product behavior, adapter availability, and hardware support depend on the specific software build and target. Simulator output is generated data and does not verify physical vehicle behavior. Website automotive imagery is illustrative and does not depict Setuvion-owned facilities, equipment, customers, or test results. This site does not use analytics or tracking cookies. Contact inquiries are stored by the Node backend on its configured persistent data volume; do not submit sensitive vehicle data.</div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

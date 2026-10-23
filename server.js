@@ -21,6 +21,13 @@ const staticFiles = new Map([
   ["/index.html", ["index.html", "text/html; charset=utf-8"]],
   ["/styles.css", ["styles.css", "text/css; charset=utf-8"]],
   ["/script.js", ["script.js", "text/javascript; charset=utf-8"]],
+  ["/vehicleconnect.css", ["vehicleconnect.css", "text/css; charset=utf-8"]],
+  ["/vehicleconnect-demo.js", ["vehicleconnect-demo.js", "text/javascript; charset=utf-8"]],
+  ["/products/vehicleconnect", ["products/vehicleconnect/index.html", "text/html; charset=utf-8"]],
+  ["/products/vehicleconnect/", ["products/vehicleconnect/index.html", "text/html; charset=utf-8"]],
+  ["/products/vehicleconnect/demo", ["products/vehicleconnect/demo/index.html", "text/html; charset=utf-8"]],
+  ["/products/vehicleconnect/demo/", ["products/vehicleconnect/demo/index.html", "text/html; charset=utf-8"]],
+  ["/assets/vehicleconnect-banner.png", ["assets/vehicleconnect-banner.png", "image/png"]],
   ["/assets/favicon.svg", ["assets/favicon.svg", "image/svg+xml"]],
   ["/assets/setuvion-technologies-logo.png", ["assets/setuvion-technologies-logo.png", "image/png"]],
   ["/assets/autoverify-studio-logo.png", ["assets/autoverify-studio-logo.png", "image/png"]],
@@ -187,7 +194,18 @@ async function submitInquiry(request, response) {
     email: cleanText(body.email, 254).toLowerCase(),
     company: cleanText(body.company, 120),
     message: cleanText(body.message, 2000),
+    formType: cleanText(body.formType, 40) || "general",
+    vehicleType: cleanText(body.vehicleType, 60),
+    areaOfInterest: cleanText(body.areaOfInterest, 80),
   };
+  const allowedFormTypes = new Set(["general", "vehicleconnect-pilot"]);
+  const allowedVehicleTypes = new Set(["", "Motorcycle / scooter", "Passenger car", "Electric vehicle", "Commercial fleet", "Other / not decided"]);
+  const allowedInterests = new Set(["", "Prototype collaboration", "Fleet pilot", "Hardware integration", "Automotive software development", "General inquiry"]);
+  if (!allowedFormTypes.has(inquiry.formType)
+      || (inquiry.formType === "vehicleconnect-pilot" && (!allowedVehicleTypes.has(inquiry.vehicleType) || !allowedInterests.has(inquiry.areaOfInterest) || !inquiry.vehicleType || !inquiry.areaOfInterest))) {
+    sendJson(response, 400, { error: "Choose a valid vehicle type and area of interest." });
+    return;
+  }
   const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(inquiry.email);
   if (inquiry.name.length < 2 || !validEmail || inquiry.message.length < 20 || body.consent !== true) {
     sendJson(response, 400, { error: "Enter your name, a valid email, a message of at least 20 characters, and consent to store the inquiry." });

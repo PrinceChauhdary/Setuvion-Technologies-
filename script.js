@@ -30,34 +30,39 @@ previewTabs.forEach((tab) => {
   });
 });
 
-document.querySelector("#year").textContent = new Date().getFullYear();
+const year = document.querySelector("#year");
+if (year) year.textContent = new Date().getFullYear();
 
-const form = document.querySelector("#contact-form");
-const formStatus = document.querySelector("#form-status");
-const submitButton = document.querySelector("#submit-inquiry");
-form.addEventListener("submit", async (event) => {
-  event.preventDefault();
-  if (!form.reportValidity()) return;
-  submitButton.disabled = true;
-  submitButton.textContent = "Sending…";
-  formStatus.textContent = "Sending your inquiry to this website…";
-  const formData = new FormData(form);
-  const payload = Object.fromEntries(formData.entries());
-  payload.consent = formData.get("consent") === "on";
-  try {
-    const response = await fetch("/api/inquiries", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(payload),
-    });
-    const result = await response.json();
-    if (!response.ok) throw new Error(result.error || "We could not send the inquiry.");
-    form.reset();
-    formStatus.textContent = "Thanks. Your inquiry was received and stored for the Setuvion team.";
-  } catch (error) {
-    formStatus.textContent = error.message || "The server could not be reached. Please try again later.";
-  } finally {
-    submitButton.disabled = false;
-    submitButton.innerHTML = 'Send inquiry <span aria-hidden="true">↗</span>';
-  }
+document.querySelectorAll("form[data-inquiry-form], #contact-form").forEach((form) => {
+  const status = form.querySelector("[data-form-status]") || form.querySelector("#form-status");
+  const button = form.querySelector('button[type="submit"]');
+  if (!status || !button) return;
+  const originalButton = button.innerHTML;
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    button.disabled = true;
+    button.textContent = "Sending…";
+    status.textContent = "Sending your inquiry to this website…";
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
+    payload.consent = formData.get("consent") === "on";
+    try {
+      const response = await fetch("/api/inquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || "We could not send the inquiry.");
+      form.reset();
+      status.textContent = form.dataset.successMessage || "Thanks. Your inquiry was received and stored for the Setuvion team.";
+    } catch (error) {
+      status.textContent = error.message || "The server could not be reached. Please try again later.";
+    } finally {
+      button.disabled = false;
+      button.innerHTML = originalButton;
+    }
+  });
 });

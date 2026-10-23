@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1c32">
+  <meta name="description" content="Explore Setuvion VehicleConnect, a connected-vehicle IoT platform concept in research and development for two-wheelers, cars, EVs, and fleets.">
+  <title>VehicleConnect | Setuvion Technologies</title>
+  <link rel="icon" href="/assets/setuvion-technologies-logo.png" type="image/png">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/vehicleconnect.css">
+</head>
+<body class="vehicleconnect-page">
+  <div class="top-rule"></div>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Setuvion Technologies home"><img src="/assets/setuvion-technologies-logo.png" alt="Setuvion Technologies"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="/#top">Home</a><a href="/#portfolio">Solutions</a>
+      <details class="nav-dropdown">
+        <summary>Products</summary><div class="nav-dropdown-menu"><a href="/#product">AutoVerify Studio <small>Automotive software testing</small></a><a href="/products/vehicleconnect" aria-current="page">VehicleConnect <small>Connected vehicle platform · R&amp;D</small></a></div>
+      </details>
+      <a href="/#technology">R&amp;D Lab</a><a href="/#about">About</a><a class="nav-cta" href="#pilot">Pilot partnership <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="vc-hero">
+      <div class="vc-hero-inner vc-showcase-layout">
+        <div class="vc-hero-copy">
+          <a class="vc-back-link" href="/">← Setuvion Technologies</a>
+          <span class="vc-status"><i></i> IN RESEARCH &amp; DEVELOPMENT</span>
+          <div class="eyebrow eyebrow-light">CONNECTED MOBILITY · PRODUCT CONCEPT</div>
+          <h1>Connecting every vehicle to a <span>smarter future.</span></h1>
+          <p>A modular connected-vehicle IoT platform concept for motorcycles, passenger cars, electric vehicles, and commercial fleets. We’re exploring location, telemetry, security alerts, and fleet connectivity around one shared core.</p>
+          <p class="vc-hero-caveat">Research-stage concept. No commercial service, production hardware, vehicle certification, customer deployment, or production-vehicle test result is claimed.</p>
+          <div class="vc-hero-actions"><a class="button button-primary" href="#features">Explore features <span aria-hidden="true">↓</span></a><a class="vc-inline-link" href="#pilot">Become a pilot partner ↗</a></div>
+        </div>
+        <figure class="vc-product-showcase">
+          <img src="/assets/vehicleconnect-banner.png" alt="Setuvion VehicleConnect concept showing a motorcycle, car, connected device, mobile dashboard, and proposed mobility features" width="1672" height="941" fetchpriority="high">
+          <figcaption>VehicleConnect concept illustration · Proposed capabilities · In research and development</figcaption>
+        </figure>
+      </div>
+      <div class="vc-hero-grid" aria-hidden="true"></div>
+    </section>
+
+    <section class="vc-section vc-compatibility section-wrap" id="solutions">
+      <div class="section-heading"><div><div class="eyebrow">ONE CONNECTIVITY CORE · DIFFERENT VEHICLE NEEDS</div><h2>Designed to explore <span>more than one vehicle type.</span></h2></div><p>Tracking concepts and vehicle-specific diagnostics have different requirements. Compatibility, wiring, and signal availability must be validated separately for each vehicle and interface.</p></div>
+      <div class="vc-compat-grid">
+        <article class="vc-compat-card"><span class="vc-card-icon">2W</span><span class="vc-state">PROPOSED SCOPE</span><h3>Two-wheelers</h3><p>Examples for future discovery: Hero Splendor, Honda Shine, Bajaj Platina, and TVS Sport. Names are target examples only, not tested compatibility claims.</p><ul><li>GNSS location and ride history</li><li>Movement alerts and geofencing</li><li>Battery voltage with compatible, protected wiring</li></ul></article>
+        <article class="vc-compat-card"><span class="vc-card-icon">CAR</span><span class="vc-state">VEHICLE-DEPENDENT</span><h3>Passenger cars</h3><p>Explore a shared tracking foundation with optional diagnostics where a supported interface and vehicle profile are available.</p><ul><li>Location, trips, and security alerts</li><li>Optional OBD-II diagnostics</li><li>Engine signals only when exposed and supported</li></ul></article>
+        <article class="vc-compat-card"><span class="vc-card-icon">EV</span><span class="vc-state">INTERFACE-DEPENDENT</span><h3>Electric vehicles</h3><p>EV telemetry depends on the vehicle, gateway, permissions, and documented signal source. No battery-management integration is implemented.</p><ul><li>Location and trip analytics concepts</li><li>Vehicle security alerts</li><li>Battery telemetry only through supported interfaces</li></ul></article>
+        <article class="vc-compat-card"><span class="vc-card-icon">FLEET</span><span class="vc-state">PLANNED</span><h3>Commercial fleets</h3><p>Fleet workflows are a future application layer. No live fleet portal or telemetry API is available today.</p><ul><li>Fleet location and usage concepts</li><li>Maintenance reminders</li><li>Device health and future telemetry APIs</li></ul></article>
+      </div>
+      <div class="vc-scope-note"><strong>Universal vs. vehicle-specific</strong><span>GNSS-based location and movement detection can be designed as device-level capabilities. OBD-II, CAN, engine, EV battery, and voltage data depend on wiring, interface support, vehicle configuration, and validation.</span></div>
+    </section>
+
+    <section class="vc-section vc-feature-section" id="features">
+      <div class="section-wrap"><div class="section-heading"><div><div class="eyebrow eyebrow-light">CAPABILITY MAP</div><h2>Useful signals, <span>with honest status.</span></h2></div><p>These are research and prototype targets, not a feature list for an available product. Every capability needs implementation and target-specific validation before real-world use.</p></div>
+        <div class="vc-feature-grid">
+          <article><span class="vc-feature-symbol">⌖</span><span class="vc-feature-status scope">PROTOTYPE SCOPE</span><h3>Real-time vehicle tracking</h3><p>GNSS device location concept; no live tracker is currently connected.</p></article>
+          <article><span class="vc-feature-symbol">⌁</span><span class="vc-feature-status scope">PROTOTYPE SCOPE</span><h3>Movement and theft alerts</h3><p>Explore motion-triggered alerts; reliability and false-positive behavior require testing.</p></article>
+          <article><span class="vc-feature-symbol">↗</span><span class="vc-feature-status scope">PROTOTYPE SCOPE</span><h3>Trip history and analytics</h3><p>Proposed local telemetry records with route summaries and distance estimates.</p></article>
+          <article><span class="vc-feature-symbol">◎</span><span class="vc-feature-status scope">PROTOTYPE SCOPE</span><h3>Geofencing</h3><p>Explore saved zones and entry or exit notifications after connectivity design.</p></article>
+          <article><span class="vc-feature-symbol">⌁</span><span class="vc-feature-status dependent">VEHICLE-DEPENDENT</span><h3>Battery voltage monitoring</h3><p>Requires a compatible electrical design, protected wiring, and validated measurement circuit.</p></article>
+          <article><span class="vc-feature-symbol">⌘</span><span class="vc-feature-status dependent">VEHICLE-DEPENDENT</span><h3>Optional OBD-II / CAN data</h3><p>Requires a supported adapter, vehicle-specific signal definitions, and authorized read-only access.</p></article>
+          <article><span class="vc-feature-symbol">▦</span><span class="vc-feature-status planned">PLANNED</span><h3>Fleet management dashboard</h3><p>Potential web workflows for vehicle groups, alerts, and usage review.</p></article>
+          <article><span class="vc-feature-symbol">◇</span><span class="vc-feature-status planned">PLANNED</span><h3>Secure device communication</h3><p>Device identity, key handling, secure transport, and provisioning are design requirements to validate.</p></article>
+          <article><span class="vc-feature-symbol">⟳</span><span class="vc-feature-status planned">PLANNED</span><h3>Remote firmware updates</h3><p>Future capability only; no update service or update safety process exists in this concept.</p></article>
+          <article><span class="vc-feature-symbol">⌕</span><span class="vc-feature-status planned">PLANNED</span><h3>Vehicle health analytics</h3><p>Requires trusted, supported signals and validated interpretation for each vehicle.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="vc-section vc-demo-teaser">
+      <div class="section-wrap vc-demo-teaser-layout"><div><div class="eyebrow eyebrow-light">INTERACTIVE CONCEPT · SYNTHETIC TELEMETRY</div><h2>Explore the dashboard <span>without a vehicle connected.</span></h2><p>Switch between motorcycle, car, and EV examples. Values are generated locally for interface demonstration only; this page does not connect to GPS, vehicle hardware, or a backend telemetry service.</p><a class="button button-primary" href="/products/vehicleconnect/demo">Open simulated dashboard <span aria-hidden="true">→</span></a></div><div class="vc-teaser-card"><div class="vc-teaser-top"><span>VEHICLECONNECT / DEMO</span><b>SIMULATED</b></div><div class="vc-teaser-metrics"><div><small>SPEED</small><strong>38 <i>km/h</i></strong></div><div><small>DEVICE</small><strong>Online <i>sample</i></strong></div></div><div class="vc-teaser-line"><span></span></div><small>Illustrative telemetry · not a live vehicle</small></div></div>
+    </section>
+
+    <section class="vc-section vc-roadmap section-wrap" id="roadmap">
+      <div class="section-heading"><div><div class="eyebrow">RESEARCH &amp; DEVELOPMENT ROADMAP</div><h2>Work in stages. <span>Validate each layer.</span></h2></div><p>Stages indicate intended work only. No completion dates or production readiness are promised.</p></div>
+      <div class="vc-roadmap-grid">
+        <article><span>01 · PROOF OF CONCEPT</span><b>PLANNED</b><h3>Bench-level foundation</h3><ul><li>Explore everyday vehicle tracking needs</li><li>Evaluate location and trip insights</li><li>Develop an early dashboard concept</li></ul></article>
+        <article><span>02 · MOTORCYCLE PROTOTYPE</span><b>PLANNED</b><h3>Protected device integration</h3><ul><li>Explore a practical motorcycle experience</li><li>Motion sensing and trip history</li><li>Authorized initial testing on compatible motorcycles</li></ul></article>
+        <article><span>03 · CAR INTEGRATION</span><b>FUTURE</b><h3>Read-only vehicle data</h3><ul><li>Explore useful vehicle information</li><li>Understand owner and fleet needs</li><li>Vehicle profile and compatibility validation</li></ul></article>
+        <article><span>04 · PRODUCT ENGINEERING</span><b>FUTURE</b><h3>Engineering and pilot readiness</h3><ul><li>Refine the product experience</li><li>Evaluate reliability and security</li><li>Applicable compliance assessment and pilot planning</li></ul></article>
+      </div>
+      <p class="vc-roadmap-note">No automotive certification, roadworthiness assessment, production deployment, or supported-vehicle list is claimed.</p>
+    </section>
+
+    <section class="vc-section vc-business">
+      <div class="section-wrap"><div class="section-heading"><div><div class="eyebrow eyebrow-light">POTENTIAL SOLUTIONS</div><h2>Adapt the concept to <span>the operating model.</span></h2></div><p>These are proposed solution directions, not packages available for purchase. Pricing and feature boundaries have not been validated.</p></div>
+        <div class="vc-business-grid">
+          <article><span class="vc-business-label">CONCEPT · VEHICLECONNECT LITE</span><h3>Tracking and trip insights</h3><p>Potential device-level location, movement alerts, geofencing, and trip history workflows for individual owners and small teams.</p><a href="#pilot">Discuss the concept ↗</a></article>
+          <article><span class="vc-business-label">CONCEPT · VEHICLECONNECT PRO</span><h3>Diagnostics and fleet integration</h3><p>Potential expansion to supported vehicle diagnostics, fleet operations, and customer APIs after vehicle-specific engineering and validation.</p><a href="#pilot">Explore a collaboration ↗</a></article>
+        </div>
+        <div class="vc-audience-list"><span>RESEARCH CONVERSATIONS</span><p>Motorcycle owners · two-wheeler delivery fleets · rental operators · passenger fleets · EV startups · automotive R&amp;D teams</p></div>
+      </div>
+    </section>
+
+    <section class="vc-section vc-pilot section-wrap" id="pilot">
+      <div class="vc-pilot-copy"><div class="eyebrow">EARLY DISCOVERY · NO COMMITMENT IMPLIED</div><h2>Help shape the next generation of <span>connected mobility.</span></h2><p>We’re looking to learn from automotive engineers, fleet operators, technology partners, and potential pilot collaborators. VehicleConnect remains an R&amp;D concept, and pilot scope would need to be agreed before any vehicle work.</p><div class="vc-contact-points"><span>Prototype collaboration</span><span>Fleet pilot discovery</span><span>Hardware integration research</span><span>Automotive software work</span></div></div>
+      <form class="vc-contact-form" id="pilot-form" data-inquiry-form data-success-message="Thank you. Your VehicleConnect inquiry was received and stored for the Setuvion team to review.">
+        <input type="hidden" name="formType" value="vehicleconnect-pilot">
+        <div class="vc-form-heading"><span>PILOT PARTNER INQUIRY</span><small>Fields marked required must be completed.</small></div>
+        <div class="vc-form-grid"><label>Full name<input name="name" autocomplete="name" maxlength="100" required></label><label>Company / organization <span>(optional)</span><input name="company" autocomplete="organization" maxlength="120"></label></div>
+        <label>Email<input name="email" type="email" autocomplete="email" maxlength="254" required></label>
+        <div class="vc-form-grid"><label>Vehicle type<select name="vehicleType" required><option value="">Choose a vehicle type</option><option>Motorcycle / scooter</option><option>Passenger car</option><option>Electric vehicle</option><option>Commercial fleet</option><option>Other / not decided</option></select></label><label>Area of interest<select name="areaOfInterest" required><option value="">Choose an area</option><option>Prototype collaboration</option><option>Fleet pilot</option><option>Hardware integration</option><option>Automotive software development</option><option>General inquiry</option></select></label></div>
+        <label>Message<textarea name="message" rows="4" minlength="20" maxlength="2000" required placeholder="Tell us about the workflow or problem you would like to discuss."></textarea></label>
+        <div class="honeypot" aria-hidden="true"><label>Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+        <label class="vc-consent"><input name="consent" type="checkbox" required><span>I agree that Setuvion may store this inquiry on its website server to follow up. I will not include credentials, customer logs, or confidential vehicle data.</span></label>
+        <div class="vc-form-submit"><button class="button button-primary" type="submit">Send pilot inquiry <span aria-hidden="true">↗</span></button><p data-form-status aria-live="polite">The form stores your inquiry on the website backend; it does not connect to a vehicle or send email automatically.</p></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-main"><a class="footer-brand" href="/"><img src="/assets/setuvion-technologies-logo.png" alt="Setuvion Technologies"></a><p>Automotive software and connected mobility R&amp;D<br><span>AutoVerify Studio · VehicleConnect concept</span></p><a class="back-top" href="#top">BACK TO TOP ↑</a></div><div class="footer-bottom"><span>© <span id="year"></span> Setuvion Technologies · Working name</span><span>VehicleConnect · In R&amp;D · Not commercially available</span><a href="/#legal">Legal &amp; privacy</a></div><div class="legal-note">VehicleConnect is a research-stage concept. Features and dashboard data are proposed or simulated. They do not indicate installed hardware, vehicle compatibility, live location, production testing, certification, or customer deployment. Do not submit confidential information.</div></footer>
+  <script src="/script.js"></script>
+</body>
+</html>

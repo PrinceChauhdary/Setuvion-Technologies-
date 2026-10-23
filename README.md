@@ -1,6 +1,6 @@
 # Setuvion website
 
-Node.js website and inquiry backend for Setuvion Technologies and the AutoVerify Studio developer preview. The backend uses Node's built-in HTTP and filesystem modules; there are no npm dependencies.
+Node.js website and inquiry backend for Setuvion Technologies, AutoVerify Studio, and VehicleConnect. AutoVerify Studio is a desktop automotive-software validation product in development. VehicleConnect is a separate connected-mobility R&D concept. The backend uses Node's built-in HTTP and filesystem modules; there are no npm dependencies.
 
 ## Run locally
 
@@ -10,12 +10,14 @@ Install Node.js 24 LTS or newer, then run from this directory:
 npm start
 ```
 
-Open `http://localhost:8080`. The website serves its static pages and accepts contact inquiries at `POST /api/inquiries`.
+Open `http://localhost:8080`. VehicleConnect has its own product page at `/products/vehicleconnect` and local simulated dashboard at `/products/vehicleconnect/demo`.
+
+The dashboard renders deterministic sample telemetry in the browser. It has no device, GPS, cellular, cloud, or live telemetry connection. All hardware, diagnostics, cloud, and customer-facing VehicleConnect capabilities are proposed or vehicle-dependent, as labeled on the product page.
 
 ## Backend behavior
 
 - Validates and length-limits inquiry fields, requires a matching browser origin, uses a honeypot, caps request bodies at 16 KiB, and rate-limits each connection to five submissions per 15 minutes in memory.
-- Stores submitted name, email, optional company, message, and received time as JSON Lines in `runtime-data/inquiries.jsonl` with restrictive file permissions. The runtime data folder is ignored by Git and is not part of the public asset allowlist.
+- Stores submitted name, email, optional company, message, form type, optional vehicle type and area of interest, and received time as JSON Lines in `runtime-data/inquiries.jsonl` with restrictive file permissions. The runtime data folder is ignored by Git and is not part of the public asset allowlist.
 - Sends a restrictive Content Security Policy and browser security headers; the optional HSTS header is sent only when `SITE_ORIGIN` is HTTPS.
 - Serves only explicitly listed public files. Inquiry data and other files beside the public assets are not exposed by the static-file handler.
 - Does not send email or use a third-party form service. The site owner reads inquiries from the configured storage volume.
@@ -50,4 +52,4 @@ Replace the example origin before deployment. Configure HTTPS at the hosting pro
 
 The automotive workshop and motorcycle workshop visuals are illustrative generated imagery. They do not depict Setuvion-owned facilities, equipment, customers, or test results.
 
-The site includes a Security & Privacy overview and a native FAQ. These describe the current preview safeguards and do not represent certification or an independent security assessment. The AutoVerify Studio download panel is intentionally marked unavailable until a distributable package and license policy are ready. Confirm the company name, trademark, domain, legal copy, inquiry retention policy, and contact workflow before public launch.
+The site includes a Security & Privacy overview and a native FAQ. These describe the current preview safeguards and do not represent certification or an independent security assessment. The AutoVerify Studio download panel is intentionally marked unavailable until a distributable package and license policy are ready. VehicleConnect is a separate R&D concept and is not presented as deployed or commercially available. Confirm the company name, trademark, domain, legal copy, inquiry retention policy, and contact workflow before public launch.

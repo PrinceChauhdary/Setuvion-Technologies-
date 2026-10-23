@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f7fb">
+  <meta name="description" content="Explore the Setuvion VehicleConnect dashboard concept using synthetic telemetry. No vehicle or live backend is connected.">
+  <title>VehicleConnect Simulated Dashboard | Setuvion Technologies</title>
+  <link rel="icon" href="/assets/setuvion-technologies-logo.png" type="image/png">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/vehicleconnect.css">
+</head>
+<body class="vehicleconnect-page vc-demo-page">
+  <div class="top-rule"></div>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Setuvion Technologies home"><img src="/assets/setuvion-technologies-logo.png" alt="Setuvion Technologies"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation"><a href="/#top">Home</a><a href="/#portfolio">Solutions</a><details class="nav-dropdown"><summary>Products</summary><div class="nav-dropdown-menu"><a href="/#product">AutoVerify Studio <small>Automotive software testing</small></a><a href="/products/vehicleconnect">VehicleConnect <small>Connected vehicle platform · R&amp;D</small></a></div></details><a href="/#technology">R&amp;D Lab</a><a href="/#about">About</a><a class="nav-cta" href="/products/vehicleconnect/#pilot">Pilot partnership <span aria-hidden="true">↗</span></a></nav>
+  </header>
+
+  <main id="top" class="vc-dashboard-wrap">
+    <div class="vc-demo-breadcrumb"><a href="/products/vehicleconnect">← VehicleConnect</a><span>SIMULATED DASHBOARD</span></div>
+    <section class="vc-dashboard-head">
+      <div><div class="eyebrow">SETUVION VEHICLECONNECT · UI CONCEPT</div><h1>Connected mobility <span>dashboard.</span></h1><p>Interact with generated sample telemetry. This demo does not connect to a vehicle, GNSS receiver, cellular network, or cloud service.</p></div>
+      <div class="vc-sim-warning"><span class="vc-sim-indicator"></span><div><strong>SIMULATED DATA</strong><small>All values on this page are generated locally.</small></div></div>
+    </section>
+
+    <section class="vc-dashboard-controls" aria-label="Demo controls">
+      <label for="vehicle-kind">Example vehicle<select id="vehicle-kind"><option value="motorcycle">Motorcycle</option><option value="car">Passenger car</option><option value="ev">Electric vehicle</option></select></label>
+      <div class="vc-demo-control-actions"><button id="toggle-demo" type="button" class="vc-control-button"><span aria-hidden="true">Ⅱ</span> Pause sample</button><button id="reset-demo" type="button" class="vc-control-button secondary">Reset</button></div>
+      <span class="vc-demo-session">LOCAL PREVIEW · NO DEVICE CONNECTED</span>
+    </section>
+
+    <section class="vc-dashboard-grid" aria-label="Simulated vehicle telemetry dashboard">
+      <article class="vc-dash-card vc-vehicle-card">
+        <div class="vc-dash-card-head"><div><span class="vc-dash-kicker">SELECTED SAMPLE</span><h2 id="selected-vehicle-name">Motorcycle · Demo 01</h2></div><span class="vc-state-pill simulated-pill">SIMULATED SESSION</span></div>
+        <div class="vc-vehicle-status"><span class="vc-status-dot"></span><div><strong>Sample device online</strong><small>UI state only · no hardware connection</small></div><span class="vc-dash-tag">GENERATED</span></div>
+        <div class="vc-mini-meta"><div><span>LAST SAMPLE</span><strong id="sample-time">—</strong></div><div><span>DEVICE HEALTH</span><strong id="device-health">96% · example</strong></div></div>
+      </article>
+
+      <article class="vc-dash-card vc-location-card">
+        <div class="vc-dash-card-head"><div><span class="vc-dash-kicker">LAST KNOWN LOCATION</span><h2>Sample Zone A</h2></div><span class="vc-state-pill">SIMULATED</span></div>
+        <div class="vc-map-illustration" role="img" aria-label="Illustrative route graphic showing simulated sample zone A, not a real map or live GPS">
+          <svg viewBox="0 0 560 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path class="map-road" d="M-10 135 C70 120 85 60 160 75 S245 150 310 116 380 22 440 50 515 124 570 78"/><path class="map-route" d="M-10 135 C70 120 85 60 160 75 S245 150 310 116 380 22 440 50 515 124 570 78"/><circle cx="310" cy="116" r="7"/><circle cx="310" cy="116" r="15"/></svg>
+          <span class="map-label map-label-start">SAMPLE START</span><span class="map-label map-label-zone">ZONE A · SIMULATED</span>
+        </div>
+        <div class="vc-location-meta"><span>Generated sample coordinates</span><strong id="sample-coordinates">12.9716° N · 77.5946° E</strong></div>
+      </article>
+
+      <article class="vc-dash-card vc-metric-card"><div class="vc-metric-top"><span class="vc-dash-kicker">SPEED</span><span class="vc-metric-icon">↗</span></div><strong class="vc-metric-value"><span id="speed-value">18</span><small>km/h</small></strong><span class="vc-metric-caption">Generated sample · not a vehicle measurement</span></article>
+      <article class="vc-dash-card vc-metric-card"><div class="vc-metric-top"><span class="vc-dash-kicker" id="battery-label">BATTERY VOLTAGE</span><span class="vc-metric-icon cyan-icon">ϟ</span></div><strong class="vc-metric-value"><span id="battery-value">12.6</span><small id="battery-unit">V</small></strong><span class="vc-metric-caption">Illustrative value · real sensing not implemented</span></article>
+      <article class="vc-dash-card vc-metric-card"><div class="vc-metric-top"><span class="vc-dash-kicker">IGNITION</span><span class="vc-metric-icon amber-icon">◉</span></div><strong class="vc-metric-value" id="ignition-value">ON</strong><span class="vc-metric-caption">Synthetic state for interface demo</span></article>
+      <article class="vc-dash-card vc-metric-card"><div class="vc-metric-top"><span class="vc-dash-kicker">TRIP DISTANCE</span><span class="vc-metric-icon violet-icon">⌁</span></div><strong class="vc-metric-value"><span id="trip-distance">18.4</span><small>km</small></strong><span class="vc-metric-caption">Illustrative trip counter</span></article>
+
+      <article class="vc-dash-card vc-telemetry-card">
+        <div class="vc-dash-card-head"><div><span class="vc-dash-kicker">SAMPLE TELEMETRY HISTORY</span><h2>Speed over demo time</h2></div><span class="vc-state-pill">GENERATED SERIES</span></div>
+        <div class="vc-chart-wrap"><svg id="telemetry-chart" viewBox="0 0 720 210" role="img" aria-label="Generated sample speed values over time"><defs><linearGradient id="vc-chart-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#287ce5" stop-opacity=".22"/><stop offset="1" stop-color="#287ce5" stop-opacity="0"/></linearGradient></defs><path class="vc-chart-gridline" d="M48 22H700M48 64H700M48 106H700M48 148H700M48 190H700"/><text x="8" y="26">80</text><text x="8" y="68">60</text><text x="8" y="110">40</text><text x="8" y="152">20</text><text x="18" y="194">0</text><path id="chart-area" class="vc-chart-area" d=""/><polyline id="chart-line" class="vc-chart-line" points=""/><circle id="chart-point" class="vc-chart-point" cx="0" cy="0" r="5"/><text x="48" y="207">Earlier</text><text x="650" y="207">Now</text></svg></div>
+        <div class="vc-chart-foot"><span><i></i> Synthetic speed sample (km/h)</span><span id="chart-status">Updating sample</span></div>
+      </article>
+
+      <article class="vc-dash-card vc-trip-card"><div class="vc-dash-card-head"><div><span class="vc-dash-kicker">SAMPLE TRIPS</span><h2>Trip history</h2></div><span class="vc-state-pill">ILLUSTRATIVE</span></div><div class="vc-trip-list" id="trip-list"></div></article>
+      <article class="vc-dash-card vc-alert-card"><div class="vc-dash-card-head"><div><span class="vc-dash-kicker">MOVEMENT MONITOR</span><h2>Alerts</h2></div><span class="vc-state-pill amber-pill">SIMULATED</span></div><div class="vc-alert-row"><span class="vc-alert-icon">!</span><div><strong id="alert-title">Movement sample detected</strong><small id="alert-description">Generated event · no security system is connected</small></div></div><div class="vc-geofence-row"><span>Geofence</span><strong><i></i> Inside sample zone</strong></div></article>
+    </section>
+    <p class="vc-demo-disclaimer">DEMO ONLY · Values, route graphic, status, device health, alerts, and trip records are synthetic interface data. They do not represent a real vehicle, live location, telemetry connection, security alert, or validated product feature.</p>
+  </main>
+
+  <footer class="site-footer"><div class="footer-main"><a class="footer-brand" href="/"><img src="/assets/setuvion-technologies-logo.png" alt="Setuvion Technologies"></a><p>VehicleConnect · connected vehicle concept<br><span>Research and development · not commercially available</span></p><a class="back-top" href="#top">BACK TO TOP ↑</a></div><div class="footer-bottom"><span>© <span id="year"></span> Setuvion Technologies · Working name</span><span>SIMULATED TELEMETRY ONLY</span><a href="/products/vehicleconnect">VehicleConnect overview</a></div></footer>
+  <script src="/script.js"></script>
+  <script src="/vehicleconnect-demo.js"></script>
+</body>
+</html>
